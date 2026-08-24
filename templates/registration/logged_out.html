@@ -4,15 +4,35 @@
 
 {% block content %}
 <div class="min-h-[60vh] flex items-center justify-center">
-    <div class="max-w-md w-full bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 text-center">
-        <div class="text-6xl mb-4"><i class="fas fa-check-circle text-green-500"></i></div>
+    <div class="max-w-md w-full bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 text-center border border-white/20">
+        <!-- Icon -->
+        <div class="text-6xl mb-4">
+            <i class="fas fa-check-circle text-green-500"></i>
+        </div>
+
         <h2 class="text-2xl font-bold text-gray-800 mb-2">👋 You've been logged out</h2>
         <p class="text-gray-600 mb-6">Thank you for using Voice Shopping Assistant.</p>
+        <p class="text-sm text-gray-500 mb-6">We hope to see you again soon!</p>
+
         <div class="space-y-3">
-            <a href="{% url 'login' %}" class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-3 rounded-xl transition"><i class="fas fa-sign-in-alt"></i> Login Again</a>
-            <a href="{% url 'shopping:index' %}" class="block w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-3 rounded-xl transition"><i class="fas fa-home"></i> Go to Home</a>
+            <a href="{% url 'login' %}"
+               class="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-3 px-6 rounded-xl transition duration-200">
+                <i class="fas fa-sign-in-alt mr-2"></i>
+                Login Again
+            </a>
+            <a href="{% url 'shopping:index' %}"
+               class="block w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-3 px-6 rounded-xl transition duration-200">
+                <i class="fas fa-home mr-2"></i>
+                Go to Home
+            </a>
         </div>
-        <div class="mt-6 pt-6 border-t border-gray-200"><p class="text-xs text-gray-400"><i class="fas fa-lock"></i> Your session has been securely ended</p></div>
+
+        <div class="mt-6 pt-6 border-t border-gray-200">
+            <p class="text-xs text-gray-400">
+                <i class="fas fa-lock mr-1"></i>
+                Your session has been securely ended
+            </p>
+        </div>
     </div>
 </div>
 {% endblock %}

@@ -371,7 +371,9 @@ class SuggestionsView(generics.ListAPIView):
         return ShoppingHistory.objects.filter(user=self.request.user).order_by('-purchased_at')[:10]
 
     def list(self, request, *args, **kwargs):
+        queryset = self.get_queryset()
         suggestions = []
+
         frequent_items = ShoppingHistory.objects.filter(
             user=request.user
         ).values('item_name', 'category').annotate(

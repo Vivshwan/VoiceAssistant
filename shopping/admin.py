@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ShoppingList, Item, ShoppingHistory
+from .models import ShoppingList, Item, ShoppingHistory, UserPreference
 
 @admin.register(ShoppingList)
 class ShoppingListAdmin(admin.ModelAdmin):
@@ -19,3 +19,8 @@ class ShoppingHistoryAdmin(admin.ModelAdmin):
     list_display = ['user', 'item_name', 'category', 'purchased_at']
     list_filter = ['category', 'purchased_at']
     search_fields = ['item_name', 'user__username']
+
+@admin.register(UserPreference)
+class UserPreferenceAdmin(admin.ModelAdmin):
+    list_display = ['user', 'budget', 'created_at']
+    search_fields = ['user__username']
