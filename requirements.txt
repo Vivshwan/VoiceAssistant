@@ -1,0 +1,14 @@
+Django==5.0.0
+djangorestframework==3.14.0
+djangorestframework-simplejwt==5.3.0
+django-cors-headers==4.3.0
+python-dotenv==1.0.0
+openai==1.6.1
+langdetect==1.0.9
+spacy==3.5.0
+django-htmx==1.17.0
+pyspellchecker==0.8.1
+textblob==0.17.1
+word2number==1.1
+gunicorn==21.2.0
+whitenoise==6.6.0
