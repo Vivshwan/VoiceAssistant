@@ -7,6 +7,9 @@ A powerful, voice-controlled shopping list manager with AI-powered smart suggest
 ![License](https://img.shields.io/badge/License-MIT-orange)
 
 ---
+## 📝 Approach
+
+For a detailed explanation of the technical approach and architecture decisions, see [APPROACH.md](APPROACH.md).
 
 ## 🌟 Features
 
